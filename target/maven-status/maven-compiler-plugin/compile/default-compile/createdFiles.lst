@@ -1,0 +1,10 @@
+com/jhorwitz/trivia/java/com/trivia/springmvc/configuration/AppConfig.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/controller/AppController.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/model/Player.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/configuration/HibernateConfiguration.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/service/PlayerService.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/service/PlayerServiceImpl.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/dao/PlayerDao.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/dao/PlayerDaoImpl.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/configuration/AppInitializer.class
+com/jhorwitz/trivia/java/com/trivia/springmvc/dao/AbstractDao.class
