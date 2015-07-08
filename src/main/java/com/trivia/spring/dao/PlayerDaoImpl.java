@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  
 import com.trivia.spring.model.Player;
  
-@Repository("playerDao")
+@Repository("PlayerDao")
 public class PlayerDaoImpl extends AbstractDao implements PlayerDao{
  
     public void savePlayer(Player player) {
