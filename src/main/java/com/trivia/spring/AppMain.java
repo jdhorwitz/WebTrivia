@@ -17,7 +17,7 @@ public class AppMain {
     	Date currentDate = new Date();
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
  
-        PlayerService service = (PlayerService) context.getBean("playerService");
+        PlayerService service = (PlayerService) context.getBean("PlayerService");
  
         /*
          * Create Player1
