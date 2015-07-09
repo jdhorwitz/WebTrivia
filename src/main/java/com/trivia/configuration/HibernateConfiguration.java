@@ -1,4 +1,4 @@
-package com.trivia.spring.configuration;
+package com.trivia.configuration;
  
 import java.util.Properties;
  

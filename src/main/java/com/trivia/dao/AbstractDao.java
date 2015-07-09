@@ -1,4 +1,4 @@
-package com.trivia.spring.dao;
+package com.trivia.dao;
  
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

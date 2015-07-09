@@ -1,4 +1,4 @@
-package com.trivia.spring.model;
+package com.trivia.model;
 
 import java.util.Date;
 

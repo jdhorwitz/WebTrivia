@@ -1,8 +1,8 @@
-package com.trivia.spring.dao;
+package com.trivia.dao;
  
 import java.util.List;
  
-import com.trivia.spring.model.Player;
+import com.trivia.model.Player;
  
 public interface PlayerDao {
  

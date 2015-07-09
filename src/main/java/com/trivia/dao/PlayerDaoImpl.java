@@ -1,4 +1,4 @@
-package com.trivia.spring.dao;
+package com.trivia.dao;
  
 import java.util.List;
  
@@ -7,7 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
  
-import com.trivia.spring.model.Player;
+import com.trivia.model.Player;
  
 @Repository("PlayerDao")
 public class PlayerDaoImpl extends AbstractDao implements PlayerDao{

@@ -1,8 +1,8 @@
-package com.trivia.spring.service;
+package com.trivia.service;
  
 import java.util.List;
  
-import com.trivia.spring.model.Player;
+import com.trivia.model.Player;
  
 public interface PlayerService {
  

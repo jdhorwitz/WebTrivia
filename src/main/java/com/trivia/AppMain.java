@@ -1,4 +1,4 @@
-package com.trivia.spring;
+package com.trivia;
  
 import java.util.Date;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import com.trivia.spring.configuration.AppConfig;
-import com.trivia.spring.model.Player;
-import com.trivia.spring.service.PlayerService;
+import com.trivia.configuration.AppConfig;
+import com.trivia.model.Player;
+import com.trivia.service.PlayerService;
  
 public class AppMain {
  
