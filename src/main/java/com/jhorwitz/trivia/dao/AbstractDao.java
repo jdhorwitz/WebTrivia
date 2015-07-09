@@ -1,4 +1,4 @@
-package com.trivia.dao;
+package com.jhorwitz.trivia.dao;
  
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

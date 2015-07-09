@@ -1,15 +1,15 @@
-package com.trivia;
+package com.jhorwitz.trivia;
  
 import java.util.Date;
 import java.util.List;
 
+import com.jhorwitz.trivia.service.PlayerService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import com.trivia.configuration.AppConfig;
-import com.trivia.model.Player;
-import com.trivia.service.PlayerService;
- 
+import com.jhorwitz.trivia.configuration.AppConfig;
+import com.jhorwitz.trivia.model.Player;
+
 public class AppMain {
  
     public static void main(String args[]) {

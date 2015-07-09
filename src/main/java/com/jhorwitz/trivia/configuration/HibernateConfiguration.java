@@ -1,4 +1,4 @@
-package com.trivia.configuration;
+package com.jhorwitz.trivia.configuration;
  
 import java.util.Properties;
  

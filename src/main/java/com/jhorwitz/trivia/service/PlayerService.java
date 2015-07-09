@@ -1,8 +1,8 @@
-package com.trivia.service;
+package com.jhorwitz.trivia.service;
  
 import java.util.List;
  
-import com.trivia.model.Player;
+import com.jhorwitz.trivia.model.Player;
  
 public interface PlayerService {
  

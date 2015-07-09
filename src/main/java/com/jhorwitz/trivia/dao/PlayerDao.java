@@ -1,8 +1,8 @@
-package com.trivia.dao;
+package com.jhorwitz.trivia.dao;
  
 import java.util.List;
  
-import com.trivia.model.Player;
+import com.jhorwitz.trivia.model.Player;
  
 public interface PlayerDao {
  

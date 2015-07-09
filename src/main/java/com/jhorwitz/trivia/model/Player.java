@@ -1,4 +1,4 @@
-package com.trivia.model;
+package com.jhorwitz.trivia.model;
 
 import java.util.Date;
 

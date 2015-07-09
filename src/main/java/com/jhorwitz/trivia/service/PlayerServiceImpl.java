@@ -1,4 +1,4 @@
-package com.trivia.service;
+package com.jhorwitz.trivia.service;
  
 import java.util.List;
  
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
  
-import com.trivia.dao.PlayerDao;
-import com.trivia.model.Player;
+import com.jhorwitz.trivia.dao.PlayerDao;
+import com.jhorwitz.trivia.model.Player;
  
 @Service("playerService")
 @Transactional
