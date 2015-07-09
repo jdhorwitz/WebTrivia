@@ -2,12 +2,26 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
  
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jhorwitz.trivia.java.com.trivia.springmvc.config</groupId>
-    <artifactId>Trivia</artifactId>
+    <groupId>com.jhorwitz.trivia</groupId>
+    <artifactId>trivia</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
  
     <name>Trivia</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
  
     <properties>
         <springframework.version>4.0.6.RELEASE</springframework.version>
