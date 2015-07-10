@@ -1,41 +1,59 @@
 package com.jhorwitz.trivia.dao;
- 
-import java.util.List;
+
 
 import com.jhorwitz.trivia.model.Player;
 import org.hibernate.Criteria;
-import org.hibernate.Query;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.*;
+import java.util.List;
+
 @Repository("PlayerDao")
-public class PlayerDaoImpl extends AbstractDao implements PlayerDao{
- 
+public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
+
+    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("trivia");
+    EntityManager em = entityManagerFactory.createEntityManager();
+    EntityTransaction userTransaction = em.getTransaction();
+
+    @Override
     public void savePlayer(Player player) {
-        persist(player);
+
     }
- 
-    @SuppressWarnings("unchecked")
+
+    @Override
     public List<Player> findAllPlayers() {
-        Criteria criteria = getSession().createCriteria(Player.class);
-        return (List<Player>) criteria.list();
+        TypedQuery<Player> query = em.createQuery("", Player.class);
+        List<Player> list = query.getResultList();
+        Player p = new Player();
+        for (int i = 0; i < list.size(); i++) {
+            p = list.get(i);
+        }
+        return (List<Player>) p;
     }
- 
-    public void deletePlayerById(String id) {
-        Query query = getSession().createSQLQuery("delete from Player where Id = :id");
-        query.setString("Id", id);
-        query.executeUpdate();
+
+    @Override
+    public void deletePlayer(String id) {
+
     }
- 
-     
-    public Player findById(String id){
-        Criteria criteria = getSession().createCriteria(Player.class);
-        criteria.add(Restrictions.eq("Id",id));
-        return (Player) criteria.uniqueResult();
+
+
+    public void createPlayer(long id, String name, int score, String team, String username) {
+        userTransaction.begin();
+        Player player = new Player();
+        player.setId(id);
+        player.setName(name);
+        player.setScore(score);
+        player.setTeam(team);
+        player.setUsername(username);
+        em.persist(player);
+        userTransaction.commit();
     }
-     
-    public void updatePlayer(Player player){
+
+    public Player getPlayer(String id) {
+        return null;
+    }
+
+    public void updatePlayer(Player player) {
         getSession().update(player);
     }
-     
 }

@@ -10,9 +10,9 @@ public interface PlayerDao {
      
     List<Player> findAllPlayers();
      
-    void deletePlayerById(String id);
+    void deletePlayer(String id);
      
-    Player findById(String id);
+    Player getPlayer(String id);
      
     void updatePlayer(Player player);
 }
