@@ -2,15 +2,15 @@ package com.jhorwitz.trivia.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "PLAYER")
 public class Player {
 
+    @Id
+    @GeneratedValue
+    private Long id;
 	@Column(name = "USERNAME")
 	private String username;
 	@Column(name = "SCORE")
@@ -22,9 +22,8 @@ public class Player {
 	@Column(name = "DATE")
 	private Date updatedTime;
 
-	@Id
-	@Column(name = "ID")
-	private long id;
+
+    public Player() {}
 
 	public long getId() {
 		return id;
@@ -73,6 +72,18 @@ public class Player {
 	public void setUpdatedTime(Date updatedTime) {
 		this.updatedTime = updatedTime;
 	}
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", score=" + score +
+                ", name='" + name + '\'' +
+                ", team='" + team + '\'' +
+                ", updatedTime=" + updatedTime +
+                '}';
+    }
 
 
 
