@@ -29,7 +29,7 @@ public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
 
     @Override
     public void deletePlayer(String id) {
-        Query p = em.createQuery("SELECT p FROM Player p Where ID:id");
+        TypedQuery<Player> p = em.createQuery("SELECT p FROM Player p Where ID:id", Player.class);
         List<Player> list = p.getResultList();
         Player player = list.get(0);
         em.remove(player);
@@ -39,7 +39,10 @@ public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
 
 
     public Player getPlayer(String id) {
-        return null;
+        TypedQuery<Player> p = em.createQuery("SELECT p FROM Player p Where ID:id", Player.class);
+        List<Player> list = p.getResultList();
+        Player player = list.get(0);
+        return player;
     }
 
     public void updatePlayer(Player player) {
