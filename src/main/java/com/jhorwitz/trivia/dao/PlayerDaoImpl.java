@@ -14,9 +14,8 @@ public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
     @PersistenceContext
     private EntityManager em;
 
-    public Long savePlayer(Player player){
+    public void savePlayer(Player player){
         em.persist(player);
-        return player.getId();
     }
 
 
@@ -34,7 +33,7 @@ public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
     }
 
 
-    }
+
 
     public Player getPlayer(String id) {
         return null;
