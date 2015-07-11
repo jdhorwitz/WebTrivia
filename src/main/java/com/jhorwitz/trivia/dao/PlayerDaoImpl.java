@@ -29,7 +29,10 @@ public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
 
     @Override
     public void deletePlayer(String id) {
-
+        Query p = em.createQuery("SELECT p FROM Player p Where ID:id");
+        List<Player> list = query.getResultList();
+        Player player = list.get(0);
+        em.remove(player);
     }
 
 
