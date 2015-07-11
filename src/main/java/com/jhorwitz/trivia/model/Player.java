@@ -11,40 +11,23 @@ import javax.persistence.Table;
 @Table(name = "PLAYER")
 public class Player {
 
+	@Column(name = "USERNAME")
+	private String username;
+	@Column(name = "SCORE")
+	private int score;
+	@Column(name = "NAME")
+	private String name;
+	@Column(name = "TEAM")
+	private String team;
+	@Column(name = "DATE")
+	private Date updatedTime;
+
 	@Id
 	@Column(name = "ID")
 	private long id;
 
-	@Column(name = "username")
-	private String username;
-	@Column(name = "score")
-	private int score;
-	@Column(name = "name")
-	private String name;
-	@Column(name = "team")
-	private String team;
-
-	@Column(name = "date")
-	private Date updatedTime;
-
-	public Date getUpdatedTime() {
-		return updatedTime;
-	}
-
-	public void setUpdatedTime(Date updatedTime) {
-		this.updatedTime = updatedTime;
-	}
-
 	public long getId() {
 		return id;
-	}
-
-	public String getTeam() {
-		return team;
-	}
-
-	public void setTeam(String team) {
-		this.team = team;
 	}
 
 	public void setId(long id) {
@@ -74,5 +57,25 @@ public class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
+	public Date getUpdatedTime() {
+		return updatedTime;
+	}
+
+	public void setUpdatedTime(Date updatedTime) {
+		this.updatedTime = updatedTime;
+	}
+
+
+
+
 
 }
