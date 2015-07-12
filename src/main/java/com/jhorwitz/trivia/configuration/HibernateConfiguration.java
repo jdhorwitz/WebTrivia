@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 
 import javax.sql.DataSource;
- 
+
 @Configuration
 @ComponentScan({ "com.trivia.configuration" })
 @PropertySource(value = { "classpath:application.properties" })

@@ -24,12 +24,12 @@ public class PlayerServiceImpl implements PlayerService{
         return dao.findAllPlayers();
     }
  
-    public void deletePlayerById(String id) {
-        dao.deletePlayerById(id);
+    public void deletePlayer(String id) {
+        dao.deletePlayer(id);
     }
  
-    public Player findById(String id) {
-        return dao.findById(id);
+    public Player getPlayer(String id) {
+        return dao.getPlayer(id);
     }
  
     public void updatePlayer(Player player){
