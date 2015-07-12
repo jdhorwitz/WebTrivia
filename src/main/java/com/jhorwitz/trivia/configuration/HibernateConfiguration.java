@@ -22,7 +22,7 @@ public class HibernateConfiguration {
     @Bean
     public LocalEntityManagerFactoryBean entityManagerBeanFactory() {
         LocalEntityManagerFactoryBean entityManagerBeanFactory = new LocalEntityManagerFactoryBean();
-        entityManagerBeanFactory.getDataSource(dataSource());
+        //entityManagerBeanFactory.getDataSource(dataSource());
         //entityManagerBeanFactory.setPackagesToScan(new String[]{"com.trivia.model"});
         return entityManagerBeanFactory;
     }
