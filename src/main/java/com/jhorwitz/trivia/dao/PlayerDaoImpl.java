@@ -5,6 +5,7 @@ import com.jhorwitz.trivia.model.Player;
 import org.springframework.stereotype.Repository;
 import javax.persistence.*;
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 
 @Repository("PlayerDao")
@@ -12,7 +13,9 @@ import java.util.List;
 public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
 
     @PersistenceContext
-    private EntityManager em;
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("PlayerServiceImpl");
+    EntityManager em = emf.createEntityManager();
+
 
     public void savePlayer(Player player){
         em.persist(player);
@@ -29,23 +32,21 @@ public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
 
     @Override
     public void deletePlayer(String id) {
-        TypedQuery<Player> p = em.createQuery("SELECT p FROM Player p Where ID:id", Player.class);
-        List<Player> list = p.getResultList();
-        Player player = list.get(0);
+        Player player = em.find(Player.class, id);
         em.remove(player);
     }
 
-
-
-
     public Player getPlayer(String id) {
-        TypedQuery<Player> p = em.createQuery("SELECT p FROM Player p Where ID:id", Player.class);
-        List<Player> list = p.getResultList();
-        Player player = list.get(0);
+        Player player = em.find(Player.class, id);
         return player;
     }
 
-    public void updatePlayer(Player player) {
-        getSession().update(player);
+    public void updatePlayer(String id, String name, int score, String team, Date date, String username) {
+        Player player = em.find(Player.class, id);
+        player.setName(name);
+        player.setScore(score);
+        player.setTeam(team);
+        player.setUpdatedTime(date);
+        player.setUsername(username);
     }
 }

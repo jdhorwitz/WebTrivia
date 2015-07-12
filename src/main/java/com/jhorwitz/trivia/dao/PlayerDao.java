@@ -1,5 +1,6 @@
 package com.jhorwitz.trivia.dao;
  
+import java.util.Date;
 import java.util.List;
  
 import com.jhorwitz.trivia.model.Player;
@@ -14,5 +15,5 @@ public interface PlayerDao {
      
     Player getPlayer(String id);
      
-    void updatePlayer(Player player);
+    void updatePlayer(String id, String name, int score, String team, Date date, String username);
 }

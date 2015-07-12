@@ -14,5 +14,5 @@ public interface PlayerService {
  
     Player getPlayer(String id);
  
-    void updatePlayer(Player player);
+    void updatePlayer(String id);
 }
