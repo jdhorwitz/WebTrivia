@@ -3,6 +3,7 @@ package com.jhorwitz.trivia.dao;
 
 import com.jhorwitz.trivia.model.Player;
 import org.springframework.stereotype.Repository;
+
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.util.Date;

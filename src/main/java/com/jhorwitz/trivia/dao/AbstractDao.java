@@ -1,7 +1,5 @@
 package com.jhorwitz.trivia.dao;
- 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
@@ -9,12 +7,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public abstract class AbstractDao {
- 
-    @Autowired
-    private SessionFactory sessionFactory;
 
     @Autowired
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("PlayerServiceImpl");
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("PlayerServiceImpl");
 
  
     protected EntityManager getEntityManager() {
