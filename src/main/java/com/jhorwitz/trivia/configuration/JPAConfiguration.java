@@ -16,7 +16,7 @@ import javax.persistence.Persistence;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan({ "com.trivia.configuration" })
+@ComponentScan({ "com.jhorwitz.trivia.configuration" })
 @PropertySource(value = { "classpath:application.properties" })
 public class JPAConfiguration {
 
