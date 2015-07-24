@@ -23,14 +23,19 @@ public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
         em.persist(player);
     }
 
-
     @Override
+    public List<Player> findAllPlayers() {
+        return null;
+    }
+
+
+   /* @Override
     public List<Player> findAllPlayers() {
         TypedQuery<Player> query = em.createQuery("SELECT p FROM Player p", Player.class);
         List<Player> list = query.getResultList();
         return list;
 
-    }
+    }*/
 
     @Override
     public void deletePlayer(String id) {
