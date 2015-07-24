@@ -14,8 +14,7 @@ import java.util.List;
 public class PlayerDaoImpl extends AbstractDao implements PlayerDao {
 
     @PersistenceContext
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("PlayerServiceImpl");
-    EntityManager em = emf.createEntityManager();
+    private EntityManager em;
 
 
     public void savePlayer(Player player){
