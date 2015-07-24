@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "PLAYER")
+@Table(name = "PLAYERS")
 public class Player {
 
     @Id
