@@ -29,7 +29,7 @@
         <joda-time.version>2.3</joda-time.version>
     </properties>
 
-    <>
+    <dependencies>
 
         <!-- Spring -->
         <dependency>
@@ -67,6 +67,11 @@
             <version>2.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>3.3.2.GA</version>
+        </dependency>
 
         <!-- MySQL -->
         <dependency>
@@ -89,12 +94,7 @@
             <version>${joda-time.version}</version>
         </dependency>
 
-        <!-- To map JodaTime with database type -->
-        <dependency>
-            <groupId>org.jadira.usertype</groupId>
-            <artifactId>usertype.core</artifactId>
-            <version>3.0.0.CR1</version>
-        </dependency>
+
 
     </dependencies>
 

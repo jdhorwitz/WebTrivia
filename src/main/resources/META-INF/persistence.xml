@@ -4,20 +4,23 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
     <persistence-unit name="trivia" transaction-type="RESOURCE_LOCAL">
 
-        <provider>org.springframework.orm.jpa</provider>
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
         <class>com.jhorwitz.trivia.model.Player</class>
 
         <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://russet.wccnet.edu:8060/trvia" />
+            <property name="javax.persistence.jdbc.user" value="jhorwitz" />
+            <property name="javax.persistence.jdbc.password" value="root" />
 
-            <property name="openjpa.jdbc.DBDictionary" value="postgres" />
-            <property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver" />
-            <property name="openjpa.ConnectionURL" value="jdbc:postgresql://localhost:5433/postgres" />
-
-            <property name="openjpa.ConnectionUserName" value="postgres" />
-            <property name="openjpa.ConnectionPassword" value="password" />
-            <property name="openjpa.Log" value="SQL=TRACE" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
         </properties>
+
+
+
     </persistence-unit>
 
 </persistence>
