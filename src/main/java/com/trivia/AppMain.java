@@ -23,24 +23,24 @@ public class AppMain {
          * Create Player1
          */
         Player player1 = new Player();
-        player1.setName("Han Yenn");
+        player1.setName("Josh Horwitz");
         player1.setId(1);
         player1.setScore(0);
         player1.setTeam("red");
         player1.setUpdatedTime(currentDate);
-        player1.setUsername("hanyenn");
+        player1.setUsername("jhorwitz");
        
  
         /*
          * Create player2
          */
         Player player2 = new Player();
-        player2.setName("Dan Thomas");
+        player2.setName("Amber Horwitz");
         player2.setId(2);
         player2.setScore(0);
         player2.setTeam("red");
         player2.setUpdatedTime(currentDate);
-        player2.setUsername("danthomas");
+        player2.setUsername("ahorwitz");
  
         /*
          * Persist both players
